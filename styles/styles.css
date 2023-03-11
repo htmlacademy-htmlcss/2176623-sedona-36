@@ -1,17 +1,19 @@
 @font-face {
-  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  font-family: "PT Sans";
+
   font-display: swap;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  font-family: "PT Sans";
+
   font-display: swap;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
 *,
@@ -24,12 +26,17 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   background-color: #f2f2f2;
 }
 
 body {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
 
   font-style: normal;
@@ -38,38 +45,47 @@ body {
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #000000;
+
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.main {
+  flex-grow: 1;
+}
 
 img {
   max-width: 100%;
+
   object-fit: cover;
   object-position: center;
 }
 
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
+
   white-space: nowrap;
+
   border: 0;
+
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
 
-
 .list-reset {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
-button {
+.button {
   display: inline-block;
   padding: 8px;
 
@@ -81,6 +97,7 @@ button {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
   background-color: #756157;
   border: none;
   border-radius: 4px;
@@ -95,16 +112,18 @@ button {
   background-color: transparent;
 }
 
+/* сделать на гридах */
 .navigation {
   position: relative;
+
   width: 100%;
   padding: 0 70px;
+  display: flex;
 }
 
 .navigation-logo {
   position: relative;
   z-index: 1;
-
 
   display: block;
   align-self: start;
@@ -120,6 +139,8 @@ button {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 6px;
 }
 
@@ -155,6 +176,9 @@ button {
 
 .navigation-user-list {
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation-user-link {
@@ -188,7 +212,6 @@ button {
 .navigation-button {
   width: 160px;
 }
-
 
 .hero {
   padding: 51px 70px 82px;
@@ -244,6 +267,19 @@ button {
   color: #333333;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-container {
+  display: flex;
+}
+
+.advantages-item-full:last-child .advantages-container {
+  flex-direction: row-reverse;
+}
+
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
 }
@@ -254,8 +290,10 @@ button {
 
 .advantages-item-full {
   color: #ffffff;
+  width: 100%;
   background-color: #82b3d3;
 }
+
 .advantages-content {
   width: 400px;
   min-height: 385px;
@@ -355,10 +393,15 @@ button {
 
 .search-button {
   display: block;
-  width: 376px;
+  width: 375px;
   margin: 0 auto;
+
   font-size: 20px;
   line-height: 36px;
+}
+
+.search-text {
+  margin-bottom: 54px;
 }
 
 .subscribe {
@@ -392,9 +435,11 @@ button {
   color: #ffffff;
 }
 
+/* делаем на гридах */
 .subscribe-form {
   max-width: 684px;
   margin: 0 auto;
+  display: flex;
 }
 
 .form-input {
@@ -425,7 +470,7 @@ button {
 
 .subscribe-button {
   padding: 6px;
-
+  width: 232px;
   font-size: 20px;
   line-height: 36px;
 
@@ -441,6 +486,7 @@ button {
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .filter-page-title {
@@ -450,8 +496,12 @@ button {
   line-height: 78px;
 }
 
-breadcrumbs {
-  margin-bottom: 39px;
+.breadcrumbs-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-item {
@@ -498,6 +548,11 @@ breadcrumbs {
   background-size: 13px 15px;
 }
 
+/* делаем на гридах */
+.filter-form {
+  display: flex;
+}
+
 .filter-group {
   margin: 0;
   padding: 0;
@@ -505,20 +560,156 @@ breadcrumbs {
   border: none;
 }
 
+/* делаем на гридах
+.filter-list {} */
+
 .filter-title {
   margin-bottom: 35px;
   padding: 0;
+
 
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
+
 .filter-control-label {
   line-height: 23px;
 }
 
+.filter-control-input {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  appearance: none;
+}
+
+.filter-control-input[type="checkbox"]:checked {
+  background-image: url("../images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter-control-input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #3f5e72;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-group-range {
+  margin-left: auto;
+}
+
+/* сделать на гридах */
+.filter-range-change {
+  margin-bottom: 35px;
+  display: flex;
+}
+
+.filter-range-item {
+  position: relative;
+}
+
+.filter-range-input {
+  padding: 10px 45px 10px 18px;
+}
+
+.filter-range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.filter-range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.filter-range-input::-webkit-outer-spin-button,
+.filter-range-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.filter-range-item label {
+  position: absolute;
+  right: 0;
+
+  padding: 11px 20px;
+
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-toggle {
+  position: relative;
+
+  height: 20px;
+}
+
+.filter-toggle::before,
+.filter-toggle::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+
+  height: 4px;
+}
+
+.filter-toggle::before {
+  left: 0;
+
+  width: 76%;
+
+  background-color: #ffffff;
+}
+
+.filter-toggle::after {
+  right: 0;
+
+  width: 24%;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-toggle-item {
+  position: absolute;
+  bottom: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter-toggle-item-min {
+  left: 0;
+}
+
+.filter-toggle-item-max {
+  right: 21%;
+}
+
 .filter-button {
+  display: flex;
+  flex-direction: column;
   padding-top: 56px;
 }
 
@@ -526,8 +717,18 @@ breadcrumbs {
   margin-bottom: 33px;
   padding-bottom: 7px;
 }
+
+/* сделать на гридах */
 .sorting {
   padding: 32px 70px 20px;
+  display: flex;
+}
+
+/* делаем на гридах */
+.sorting-view {
+
+  display: flex;
+
 }
 
 .sorting-title {
@@ -549,7 +750,7 @@ breadcrumbs {
   color: #333333;
 
   background-color: transparent;
-  background-image: url("../images/arrow.svg");
+  background-image: url("../images/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: center right 18px;
   border: 2px solid #e5e5e5;
@@ -586,20 +787,23 @@ breadcrumbs {
   border: 2px solid #000000;
 }
 
-
 .hotels {
   padding: 0 70px 24px;
 }
 
+/* делаем на гридах */
 .hotels-list {
   padding-bottom: 40px;
-
   border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
+/* делаем на гридах */
 .hotels-item {
   padding: 20px;
-
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -674,8 +878,11 @@ breadcrumbs {
   background-color: #f2f2f2;
   border-radius: 4px;
 }
+
 .pagination {
-  padding: 37px 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 38px 0 37px;
 }
 
 .pagination-item {
@@ -714,8 +921,10 @@ breadcrumbs {
   background-color: transparent;
 }
 
+/* сделать на гридах */
 .page-footer {
   padding: 45px 70px 35px;
+  display: flex;
 }
 
 .footer-phone {
@@ -732,5 +941,6 @@ breadcrumbs {
   display: block;
   width: 115px;
   height: 33px;
+
   color: #000000;
 }
