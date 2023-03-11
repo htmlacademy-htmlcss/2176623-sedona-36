@@ -33,10 +33,7 @@ html {
 body {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
   width: 1200px;
-  min-height: 100vh;
   margin: 0 auto;
 
   font-style: normal;
@@ -48,10 +45,6 @@ body {
 
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.main {
-  flex-grow: 1;
 }
 
 img {
@@ -112,7 +105,6 @@ img {
   background-color: transparent;
 }
 
-/* сделать на гридах */
 .navigation {
   position: relative;
 
@@ -139,8 +131,6 @@ img {
 }
 
 .navigation-list {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: 6px;
 }
 
@@ -176,9 +166,6 @@ img {
 
 .navigation-user-list {
   margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .navigation-user-link {
@@ -211,6 +198,8 @@ img {
 
 .navigation-button {
   width: 160px;
+  height: 36px;
+
 }
 
 .hero {
@@ -274,10 +263,6 @@ img {
 
 .advantages-container {
   display: flex;
-}
-
-.advantages-item-full:last-child .advantages-container {
-  flex-direction: row-reverse;
 }
 
 .advantages-item {
@@ -387,7 +372,7 @@ img {
 }
 
 .search {
-  padding: 96px 70px;
+  padding: 96px 304px;
   text-align: center;
 }
 
@@ -435,7 +420,6 @@ img {
   color: #ffffff;
 }
 
-/* делаем на гридах */
 .subscribe-form {
   max-width: 684px;
   margin: 0 auto;
@@ -462,7 +446,7 @@ img {
 
 .subscribe-input {
   height: 52px;
-
+  width: 100%;
   font-weight: 400;
 
   border-radius: 4px 0 0 4px;
@@ -486,21 +470,33 @@ img {
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
 .filter-page-title {
   margin: 0 0 7px;
-
+  width: 100%;
   font-size: 60px;
   line-height: 78px;
 }
 
-.breadcrumbs-list {
+.filter-group-radio {
+  margin-left: 70px;
+}
 
+.filter-group {
+  justify-content: space-around;
+}
+
+.breadcrumbs {
+  margin-bottom: 39px;
+}
+
+.breadcrumbs-list {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -548,11 +544,6 @@ img {
   background-size: 13px 15px;
 }
 
-/* делаем на гридах */
-.filter-form {
-  display: flex;
-}
-
 .filter-group {
   margin: 0;
   padding: 0;
@@ -560,13 +551,20 @@ img {
   border: none;
 }
 
-/* делаем на гридах
-.filter-list {} */
+
+.filter-form {
+  display: flex;
+
+}
+
+.filter-list {
+  width: 151px;
+}
 
 .filter-title {
   margin-bottom: 35px;
   padding: 0;
-
+  margin-right: 70px;
 
   font-weight: 700;
   font-size: 20px;
@@ -616,13 +614,13 @@ img {
 }
 
 .filter-group-range {
-  margin-left: auto;
+  margin-left: 141px;
 }
 
-/* сделать на гридах */
 .filter-range-change {
   margin-bottom: 35px;
   display: flex;
+
 }
 
 .filter-range-item {
@@ -708,23 +706,23 @@ img {
 }
 
 .filter-button {
-  display: flex;
-  flex-direction: column;
   padding-top: 56px;
+  margin-left: 100px;
 }
 
 .filter-submit {
   margin-bottom: 33px;
   padding-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* сделать на гридах */
 .sorting {
   padding: 32px 70px 20px;
   display: flex;
 }
 
-/* делаем на гридах */
 .sorting-view {
 
   display: flex;
@@ -791,7 +789,6 @@ img {
   padding: 0 70px 24px;
 }
 
-/* делаем на гридах */
 .hotels-list {
   padding-bottom: 40px;
   border-bottom: 1px solid #e6e6e6;
@@ -801,11 +798,13 @@ img {
   justify-content: space-between;
 }
 
-/* делаем на гридах */
 .hotels-item {
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
+  width: 340px;
+  margin-bottom: 20px;
+
 }
 
 .hotels-img {
@@ -880,9 +879,9 @@ img {
 }
 
 .pagination {
+  padding: 37px 0;
   display: flex;
-  flex-wrap: wrap;
-  padding: 38px 0 37px;
+  margin-left: 70px;
 }
 
 .pagination-item {
@@ -921,10 +920,13 @@ img {
   background-color: transparent;
 }
 
-/* сделать на гридах */
 .page-footer {
+
   padding: 45px 70px 35px;
   display: flex;
+  margin: 0 auto;
+  width: 1200px;
+
 }
 
 .footer-phone {

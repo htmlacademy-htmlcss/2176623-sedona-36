@@ -45,14 +45,18 @@
     </header>
 
     <main class="main">
+
       <section class="filter">
         <h1 class="filter-page-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs list-reset">
+        <ul class="breadcrumbs-list list-reset">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
               <span class="visually-hidden">Главная</span>
               <img src="images/home-icon.svg" width="13" height="15" alt="Иконка домика.">
             </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <img src="images/arrow.svg" width="6.39" height="9.94" alt="Стрелка.">
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
@@ -78,7 +82,6 @@
             </ul>
           </fieldset>
 
-
           <fieldset class="filter-group filter-group-radio">
             <legend class="filter-title">Тип Жилья:</legend>
             <ul class="filter-list list-reset">
@@ -97,18 +100,19 @@
             </ul>
           </fieldset>
 
-
           <fieldset class="filter-group filter-group-range">
             <legend class="filter-title">Стоимость, ₽:</legend>
 
             <div class="filter-range-container">
               <div class="filter-range-change">
                 <div class="filter-range-item">
-                  <input class="form-input filter-range-input filter-range-input-min" id="min" name="min-price" type="number" value="0" min="0" max="9000">
+                  <input class="form-input filter-range-input filter-range-input-min" id="min" name="min-price"
+                    type="number" value="0" min="0" max="9000">
                   <label for="min">от</label>
                 </div>
                 <div class="filter-range-item">
-                  <input class="form-input filter-range-input filter-range-input-max" id="max" name="max-price" type="number" value="9000" min="0" max="9000">
+                  <input class="form-input filter-range-input filter-range-input-max" id="max" name="max-price"
+                    type="number" value="9000" min="0" max="9000">
                   <label for="max">до</label>
                 </div>
               </div>
@@ -129,7 +133,6 @@
           </div>
         </form>
       </section>
-
 
       <section class="sorting">
         <h2 class="sorting-title">Найдено гостиниц: 38</h2>
@@ -176,7 +179,8 @@
             <span class="hotels-text">Гостиница</span>
             <span class="hotels-text">От 5000 ₽</span>
             <a class="button hotels-button hotels-button-more" href="#">Подробнее</a>
-            <button class="button button-light hotels-button hotels-favorites hotels-favorites-active" type="button">В избранном</button>
+            <button class="button button-light hotels-button hotels-favorites hotels-favorites-active" type="button">В
+              избранном</button>
             <span class="hotels-rating-star hotels-rating-star-4" aria-label="4 звезды."></span>
             <span class="hotels-rating-text">Рейтинг: 9,2</span>
           </li>
@@ -209,7 +213,7 @@
             <span class="hotels-rating-text">Рейтинг: 5,0</span>
           </li>
         </ul>
-      </section>
+
 
         <ul class="pagination list-reset">
           <li class="pagination-item">
@@ -231,17 +235,18 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
+      </section>
 
-        <section class="subscribe">
-          <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text page-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="POST">
-            <label class="visually-hidden" for="email">Ваш email</label>
-            <input class="subscribe-input form-input" id="email" name="email" type="email" placeholder="Ваш e-mail"
-              required>
-            <button class="button button-light subscribe-button" type="submit">Подписаться</button>
-          </form>
-        </section>
+      <section class="subscribe">
+        <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text page-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <form class="subscribe-form" action="http://echo.htmlacademy.ru" method="POST">
+          <label class="visually-hidden" for="email">Ваш email</label>
+          <input class="subscribe-input form-input" id="email" name="email" type="email" placeholder="Ваш e-mail"
+            required>
+          <button class="button button-light subscribe-button" type="submit">Подписаться</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -273,4 +278,5 @@
       </a>
     </footer>
   </body>
+
 </html>
