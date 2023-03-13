@@ -2,7 +2,6 @@
   font-style: normal;
   font-weight: 400;
   font-family: "PT Sans";
-
   font-display: swap;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
 }
@@ -11,7 +10,6 @@
   font-style: normal;
   font-weight: 700;
   font-family: "PT Sans";
-
   font-display: swap;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
@@ -118,7 +116,9 @@ img {
 
   width: 100%;
   padding: 0 70px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px auto 88px 160px;
+  gap: 30px;
 }
 
 .navigation-logo {
@@ -139,8 +139,8 @@ img {
 }
 
 .navigation-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns:100px 114px 125px;
   margin-left: 6px;
 }
 
@@ -211,6 +211,8 @@ img {
 
 .navigation-button {
   width: 160px;
+  align-self: center;
+
 }
 
 .hero {
@@ -439,7 +441,8 @@ img {
 .subscribe-form {
   max-width: 684px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 452px 232px;
 }
 
 .form-input {
@@ -550,7 +553,9 @@ img {
 
 /* делаем на гридах */
 .filter-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150.43px auto 288px 191px;
+  gap: 70px;
 }
 
 .filter-group {
@@ -560,19 +565,21 @@ img {
   border: none;
 }
 
-/* делаем на гридах
-.filter-list {} */
+/* делаем на гридах */
+.filter-list {
+  display: grid;
+  grid-template-columns: 150.43px;
+  gap: 16px 108px;
+}
 
 .filter-title {
   margin-bottom: 35px;
   padding: 0;
 
-
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
-
 
 .filter-control-label {
   line-height: 23px;
@@ -710,7 +717,9 @@ img {
 .filter-button {
   display: flex;
   flex-direction: column;
+align-content: flex-end;
   padding-top: 56px;
+
 }
 
 .filter-submit {
@@ -721,13 +730,18 @@ img {
 /* сделать на гридах */
 .sorting {
   padding: 32px 70px 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 340px auto 160px;
+  gap: 20px;
+  justify-self: end;
 }
 
 /* делаем на гридах */
 .sorting-view {
-
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  gap: 10px;
+  justify-self: end;
 
 }
 
@@ -743,7 +757,7 @@ img {
   width: 292px;
   height: 49px;
   padding: 0 40px 0 18px;
-
+  justify-self: center;
   font-size: 18px;
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
@@ -795,10 +809,9 @@ img {
 .hotels-list {
   padding-bottom: 40px;
   border-bottom: 1px solid #e6e6e6;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 /* делаем на гридах */
@@ -806,12 +819,16 @@ img {
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
 }
 
 .hotels-img {
   display: block;
   max-width: 300px;
   height: 212px;
+  grid-column: 1/-1;
 }
 
 .hotels-img img {
@@ -823,6 +840,7 @@ img {
 .hotels-link {
   color: #000000;
   text-decoration: none;
+  grid-column: 1 /-1;
 }
 
 .hotels-title {
@@ -924,7 +942,15 @@ img {
 /* сделать на гридах */
 .page-footer {
   padding: 45px 70px 35px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 142px 720px 115px;
+  gap: 60px 10px;
+}
+.footer-social-list{
+display: grid;
+grid-template-columns: repeat(3, 47.33px);
+gap: 10;
+align-items: center;
 }
 
 .footer-phone {
