@@ -24,26 +24,22 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
   background-color: #f2f2f2;
 }
 
 body {
   position: relative;
-
   display: flex;
   flex-direction: column;
   width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
-
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #000000;
-
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -54,24 +50,19 @@ body {
 
 img {
   max-width: 100%;
-
   object-fit: cover;
   object-position: center;
 }
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
-
   white-space: nowrap;
-
   border: 0;
-
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
@@ -79,14 +70,12 @@ img {
 .list-reset {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 .button {
   display: inline-block;
   padding: 8px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -95,7 +84,6 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-
   background-color: #756157;
   border: none;
   border-radius: 4px;
@@ -113,18 +101,19 @@ img {
 /* сделать на гридах */
 .navigation {
   position: relative;
-
+  display: grid;
+  grid-template-columns: 140px 1fr auto 160px;
+  gap: 24px;
+  align-items: center;
   width: 100%;
   padding: 0 70px;
-  display: grid;
-  grid-template-columns: 140px auto 88px 160px;
-  gap: 30px;
+
 }
+
 
 .navigation-logo {
   position: relative;
   z-index: 1;
-
   display: block;
   align-self: start;
   width: 140px;
@@ -139,8 +128,8 @@ img {
 }
 
 .navigation-list {
-  display: grid;
-  grid-template-columns:100px 114px 125px;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 6px;
 }
 
@@ -150,10 +139,8 @@ img {
 
 .navigation-link {
   position: relative;
-
   display: inline-block;
   padding: 19px 0 17px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -168,9 +155,7 @@ img {
   right: 0;
   bottom: -3px;
   left: 0;
-
   height: 2px;
-
   background-color: #756257;
 }
 
@@ -183,13 +168,11 @@ img {
 
 .navigation-user-link {
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-
   color: #000000;
 }
 
@@ -197,29 +180,22 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-
   display: block;
   padding: 5px;
-
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
-
   background-color: #7db54f;
   border-radius: 10px;
 }
 
 .navigation-button {
   width: 160px;
-  align-self: center;
-
 }
 
 .hero {
   padding: 51px 70px 82px;
-
   color: #ffffff;
-
   background-color: #94989b;
   background-image: url("../images/mountains.jpg");
   background-repeat: no-repeat;
@@ -240,7 +216,6 @@ img {
 
 .page-description {
   padding: 69px 70px 68px;
-
   text-align: center;
 }
 
@@ -251,7 +226,6 @@ img {
 
 .page-title {
   margin: 0 0 25px;
-
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -308,10 +282,8 @@ img {
 
 .advantages-title {
   position: relative;
-
   margin: 0 0 31px;
   padding-bottom: 31px;
-
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -323,17 +295,14 @@ img {
   position: absolute;
   bottom: 0;
   left: 50%;
-
   width: 60px;
   height: 2px;
-
   background-color: rgba(0, 0, 0, 0.3);
   transform: translateX(-50%);
 }
 
 .advantages-text {
   margin: 0;
-
   text-align: center;
   color: #333333;
 }
@@ -362,7 +331,6 @@ img {
 
 .advantages-list-services .advantages-content {
   padding-top: 183px;
-
   background-repeat: no-repeat;
   background-position: center 78px;
 }
@@ -397,7 +365,6 @@ img {
   display: block;
   width: 375px;
   margin: 0 auto;
-
   font-size: 20px;
   line-height: 36px;
 }
@@ -408,13 +375,11 @@ img {
 
 .subscribe {
   padding: 96px 70px 104px;
-
   text-align: center;
 }
 
 .subscribe-home {
   color: #ffffff;
-
   background-color: #94989b;
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
@@ -439,35 +404,30 @@ img {
 
 /* делаем на гридах */
 .subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr 232px;
+  align-items: start;
   max-width: 684px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 452px 232px;
 }
 
 .form-input {
   width: 100%;
-  height: 48px;
+  height: 52px;
   padding: 13px 17px 10px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   font-family: "PT Sans", sans-serif;
   color: #000000;
-
   background-color: #f2f2f2;
   border: 2px solid transparent;
   border-radius: 4px;
-
   appearance: none;
 }
 
 .subscribe-input {
-  height: 52px;
-
   font-weight: 400;
-
   border-radius: 4px 0 0 4px;
 }
 
@@ -476,15 +436,13 @@ img {
   width: 232px;
   font-size: 20px;
   line-height: 36px;
-
+  height: 52px;
   border-radius: 0 4px 4px 0;
 }
 
 .filter {
   padding: 35px 70px 68px;
-
   color: #ffffff;
-
   background-color: #94989b;
   background-image: url("../images/filter.jpg");
   background-repeat: no-repeat;
@@ -494,13 +452,11 @@ img {
 
 .filter-page-title {
   margin: 0 0 7px;
-
   font-size: 60px;
   line-height: 78px;
 }
 
 .breadcrumbs-list {
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -509,7 +465,6 @@ img {
 
 .breadcrumbs-item {
   position: relative;
-
   margin-right: 28px;
 }
 
@@ -518,11 +473,9 @@ img {
   position: absolute;
   top: 50%;
   right: -18px;
-
   width: 7px;
   height: 10px;
-
-  background-image: url("../images/arrow-breadcrumbs.svg");
+  background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateY(-50%);
@@ -534,7 +487,6 @@ img {
 
 .breadcrumbs-link {
   display: block;
-
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
@@ -544,7 +496,7 @@ img {
 .breadcrumbs-link-home {
   width: 13px;
   height: 21px;
-
+  display: block;
   background-image: url("../images/home-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -554,28 +506,35 @@ img {
 /* делаем на гридах */
 .filter-form {
   display: grid;
-  grid-template-columns: 150.43px auto 288px 191px;
-  gap: 70px;
+  grid-template-columns: auto auto 1fr 191px;
+  gap: 20px 70px;
+  align-items: start;
 }
 
 .filter-group {
   margin: 0;
   padding: 0;
-
   border: none;
 }
 
 /* делаем на гридах */
 .filter-list {
   display: grid;
-  grid-template-columns: 150.43px;
-  gap: 16px 108px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  justify-content: start;
 }
+
+.filter-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 17px;
+}
+
 
 .filter-title {
   margin-bottom: 35px;
   padding: 0;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -587,14 +546,11 @@ img {
 
 .filter-control-input {
   position: relative;
-
   width: 20px;
   height: 20px;
   margin: 0;
-
   background-color: #ffffff;
   border-radius: 4px;
-
   appearance: none;
 }
 
@@ -613,10 +569,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 10px;
   height: 10px;
-
   background-color: #3f5e72;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -628,8 +582,10 @@ img {
 
 /* сделать на гридах */
 .filter-range-change {
+  display: grid;
+  grid-template-columns: repeat(2, 143px);
+  gap: 2px;
   margin-bottom: 35px;
-  display: flex;
 }
 
 .filter-range-item {
@@ -656,16 +612,13 @@ img {
 .filter-range-item label {
   position: absolute;
   right: 0;
-
   padding: 11px 20px;
-
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .filter-toggle {
   position: relative;
-
   height: 20px;
 }
 
@@ -674,33 +627,26 @@ img {
   content: "";
   position: absolute;
   bottom: 8px;
-
   height: 4px;
 }
 
 .filter-toggle::before {
   left: 0;
-
   width: 76%;
-
   background-color: #ffffff;
 }
 
 .filter-toggle::after {
   right: 0;
-
   width: 24%;
-
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .filter-toggle-item {
   position: absolute;
   bottom: 0;
-
   width: 20px;
   height: 20px;
-
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -717,9 +663,7 @@ img {
 .filter-button {
   display: flex;
   flex-direction: column;
-align-content: flex-end;
   padding-top: 56px;
-
 }
 
 .filter-submit {
@@ -729,25 +673,24 @@ align-content: flex-end;
 
 /* сделать на гридах */
 .sorting {
-  padding: 32px 70px 20px;
   display: grid;
-  grid-template-columns: 340px auto 160px;
-  gap: 20px;
-  justify-self: end;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px 68px;
+  align-items: center;
+  padding: 50px 70px 40px;
 }
 
 /* делаем на гридах */
 .sorting-view {
   display: grid;
-  grid-template-columns: repeat(3, 48px);
-  gap: 10px;
-  justify-self: end;
+  grid-template-columns: repeat(3, auto);
+  gap: 8px;
+
 
 }
 
 .sorting-title {
   margin: 0;
-
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -757,19 +700,16 @@ align-content: flex-end;
   width: 292px;
   height: 49px;
   padding: 0 40px 0 18px;
-  justify-self: center;
   font-size: 18px;
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #333333;
-
   background-color: transparent;
-  background-image: url("../images/arrow-select.svg");
+  background-image: url("../images/arrowsorting.svg");
   background-repeat: no-repeat;
   background-position: center right 18px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-
   appearance: none;
 }
 
@@ -777,7 +717,6 @@ align-content: flex-end;
   display: block;
   width: 48px;
   height: 48px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 14px;
@@ -807,21 +746,22 @@ align-content: flex-end;
 
 /* делаем на гридах */
 .hotels-list {
-  padding-bottom: 40px;
-  border-bottom: 1px solid #e6e6e6;
   display: grid;
-  grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6
 }
 
 /* делаем на гридах */
 .hotels-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  align-items: start;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  display: grid;
-  grid-template-columns: repeat(2, 140px);
-  gap: 16px 20px;
 }
 
 .hotels-img {
@@ -845,7 +785,6 @@ align-content: flex-end;
 
 .hotels-title {
   margin: 0;
-
   font-size: 24px;
   line-height: 28px;
 }
@@ -865,34 +804,34 @@ align-content: flex-end;
 .hotels-rating-star {
   display: block;
   height: 37px;
-
-  background-image: url("../images/stars.svg");
   background-repeat: no-repeat;
   background-position: left center;
 }
 
 .hotels-rating-star-4 {
   width: 90px;
+  background-image: url("../images/stars-4.svg");
 }
+
 
 .hotels-rating-star-3 {
   width: 70px;
+  background-image: url("../images/stars-3.svg");
 }
 
 .hotels-rating-star-2 {
   width: 50px;
+  background-image: url("../images/stars-2.svg");
 }
 
 .hotels-rating-text {
   display: block;
   padding: 8px;
-
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #333333;
   text-transform: uppercase;
-
   background-color: #f2f2f2;
   border-radius: 4px;
 }
@@ -912,21 +851,18 @@ align-content: flex-end;
   min-width: 60px;
   min-height: 60px;
   padding: 10px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-
   background-color: #82b3d3;
   border-radius: 4px;
 }
 
 .pagination-link-current {
   color: #000000;
-
   background-color: #f2f2f2;
 }
 
@@ -935,28 +871,35 @@ align-content: flex-end;
   font-size: 22px;
   line-height: 26px;
   color: #000000;
-
   background-color: transparent;
 }
 
 /* сделать на гридах */
 .page-footer {
-  padding: 45px 70px 35px;
   display: grid;
-  grid-template-columns: 142px 720px 115px;
-  gap: 60px 10px;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 45px 70px 35px;
 }
-.footer-social-list{
-display: grid;
-grid-template-columns: repeat(3, 47.33px);
-gap: 10;
-align-items: center;
+
+.footer-social-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
+  color: #83b3d3;
 }
 
 .footer-phone {
   display: block;
   margin: 0 auto;
-
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -967,6 +910,5 @@ align-items: center;
   display: block;
   width: 115px;
   height: 33px;
-
   color: #000000;
 }
